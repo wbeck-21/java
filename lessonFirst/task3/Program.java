@@ -7,8 +7,8 @@
 //                  0 (последнее число последовательности)
 //                  Ответ: 119 * 33542 = 3991498
 
-import java.util.Scanner;
 
+import java.util.Scanner;
 
 class Program {
     static int res = 1;
