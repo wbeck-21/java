@@ -83,13 +83,11 @@ class Program {
         int tempArr[] = arr.clone();
         int number = 0;
         int k = 0;
-
-        for (int i = tempArr.length - 1; i > 0; i--) {
-            for (int j = 1; j < i; j++) {
-                tempArr[k] *= 10;
-                k += 1;
+        for (int i = 0; i < tempArr.length; i++) {
+            for (int j = tempArr.length - i; j > 1; j--) {
+                tempArr[i] *= 10;
             }
-            number += tempArr[k];
+            number += tempArr[i];
         }
         return number;
     }
@@ -114,7 +112,5 @@ class Program {
         System.out.println("Массив, где макс и мин элементы переставлены местами: " + Arrays.toString(swapMinMax(arr)));
         System.out.println("Отсортированный массив: " + Arrays.toString(bubbleSort(arr)));
         System.out.println("Преобразование массива в число: " + arrToInt(arr));
-        System.out.println("\nМассив: " + Arrays.toString(arr));
-
     }
 }
